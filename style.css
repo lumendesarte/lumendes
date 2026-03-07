@@ -25,6 +25,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'sifonn basic';
+  src: url('font/sifonn-basic.woff2') format('woff2'),
+    url('font/sifonn-basic.woff') format('woff'),
+    url('font/sifonn-basic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 html,
 body {
   font-family: 'lu mendes bold', 'open sans', sans-serif;
@@ -43,123 +52,115 @@ main {
   flex-direction: column;
 }
 
-/* titulo conteúdo expandido E texto grande do conteudo extendido */
-h1 {
-  font-family: 'lu mendes bold', 'open sans', sans-serif;
+/* titulo conteúdo expandido*/
+.titulo-principal {
+  font-family: 'sifonn-basic', 'open sans', sans-serif;
   color: var(--preto);
-  font-size: 25px;
-  margin-top: 20px;
-  text-align: left;
+  font-size: 40px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
   width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* texto conteudo expandido e da pagina sobre */
-h2 {
-  font-family: 'lu mendes light', 'open sans', sans-serif;
+.texto-conteudo {
+  font-family: 'lu mendes regular', 'open sans', sans-serif;
   color: var(--preto);
-  font-size: 30px;
-  margin-top: 20px;
-  text-align: left;
+  font-size: 25px;
+  text-align: center;
   width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* texto formulario de contato */
-h3 {
-  font-family: 'lu mendes light', 'open sans', sans-serif;
-  font-size: 30px;
-  color: var(--preto);
-}
-
 /* titulo rodapé */
-h4 {
+.titulo-rodape {
   font-family: 'lu mendes bold', 'open sans', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   color: var(--preto);
   font-weight: bold;
 }
 
 /* texto rodapé */
-h5 {
-  font-family: 'lu mendes light', 'open sans', sans-serif;
+.texto-rodape {
+  font-family: 'lu mendes regular', 'open sans', sans-serif;
   font-size: 25px;
   color: var(--preto);
   line-height: 1.5;
 }
 
 /* barra final do rodapé */
-h6 {
+.barra-rodape {
   font-family: 'lu mendes light', 'open sans', sans-serif;
   font-size: 16px;
   color: var(--preto);
   padding: 10px 0;
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 537px) and (max-width: 1100px) {
 
-  h1 {
-    font-size: 18px;
+  .titulo-principal {
+    font-size: 30px;
   }
 
-  h2 {
+  .texto-conteudo {
+    font-size: 20px;
+  }
+
+  .titulo-rodape {
+    font-size: 20px;
+  }
+
+  .texto-rodape {
+    font-size: 20px;
+  }
+
+  .barra-rodape {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 536px) {
+
+  .titulo-principal {
+    font-size: 20px;
+  }
+
+  .texto-conteudo {
     font-size: 16px;
   }
 
-  h3 {
+  .titulo-rodape {
     font-size: 16px;
   }
-}
 
-h4 {
-  font-size: 20px;
-}
-
-h5 {
-  font-size: 16px;
-}
-
-h6 {
-  font-size: 10px;
-}
-
-@media screen and (min-width: 769px) and (max-width: 1023px) {
-
-  h1 {
-    font-size: 22px;
+  .texto-rodape {
+    font-size: 16px;
   }
 
-  h2 {
-    font-size: 18px;
-  }
-
-  h3 {
-    font-size: 18px;
+  .barra-rodape {
+    font-size: 10px;
   }
 }
 
-h4 {
-  font-size: 25px;
-}
-
-h5 {
-  font-size: 20px;
-}
-
-h6 {
-  font-size: 14px;
-}
 
 :root {
-  --branco: #f2ecdd;
+  --branco: #F2ECDD;
   --preto: #3a3837;
   --amarelo: #fdc219;
   --verdeagua: #23918e;
   --laranja: #db6516;
   --rosa: #e63366;
   --roxo: #5E2780;
+  --lilas: #A92E9A;
+  --azulescuro: #23397E;
+  --azulclaro: #1799C7;
+  --verdeescuro: #4C682D;
+  --verdeclaro: #8FA828;
+  --vermelho: #C51625;
 }
 
 .header {
@@ -300,7 +301,7 @@ nav ul li button.active {
     width: 120px;
     height: 100%;
     padding: 12px 14px;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .dropdown-content a {
@@ -329,7 +330,7 @@ nav ul li button.active {
   .btn-sobre,
   .btn-contato,
   .dropbtn {
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px 12px;
     width: 85%;
     height: 100%;
@@ -419,9 +420,9 @@ nav ul li button.active {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 536px) {
   .thumbnail .title {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
@@ -438,7 +439,7 @@ nav ul li button.active {
 }
 
 .expanded-content .content-box {
-  background-color: var(--branco);
+  background-color: var(--cor-fundo, var(--branco));
   position: relative;
   width: 100%;
   max-width: 1420px;
@@ -460,6 +461,11 @@ nav ul li button.active {
   height: auto;
   margin: 0;
   padding: 0;
+}
+
+/* espaço antes da assinatura */
+.expanded-content img.assinatura {
+  margin-top: 0px;
 }
 
 .expanded-content video {
@@ -498,7 +504,8 @@ nav ul li button.active {
 .youtube-video {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* proporção 16:9 */
+  padding-bottom: 56.25%;
+  /* proporção 16:9 */
   height: 0;
   overflow: hidden;
 }
@@ -654,23 +661,46 @@ html {
 }
 
 /* Página de contato */
-.texto-contato {
-  font-family: 'Lu Mendes regular', 'Open Sans', sans-serif;
-  background-color: var(--branco);
-  padding: 25px;
+.container-contato {
+  /* Centralização horizontal */
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
   max-width: 700px;
+  padding: 20px;
+}
+
+.texto-contato {
+  font-family: 'lu mendes regular', 'open sans', sans-serif;
+  font-size: 25px;
+  width: 100%;
+  color: var(--preto);
   text-align: left;
-  margin: auto auto;
-  margin-bottom: 20px;
 }
 
 /* Formulário */
 .container-formulario {
   background-color: var(--amarelo);
   padding: 20px;
-  width: 90%;
+  width: 94%;
   border: 1px solid var(--preto);
+  margin-top: 20px;
 }
+
+@media screen and (min-width: 537px) and (max-width: 1100px) {
+  .texto-contato {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 536px) {
+
+  .texto-contato {
+    font-size: 16px;
+  }
+}
+
+
 
 /* Inputs e textarea */
 .container-formulario input[type="text"],
@@ -748,5 +778,4 @@ strong {
 .laranja-bold {
   font-family: 'lu mendes bold', 'open sans', sans-serif;
   color: var(--laranja);
-
 }
