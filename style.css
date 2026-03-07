@@ -644,14 +644,15 @@ html {
 .container-sobre {
   max-width: 1400px;
   width: 100%;
-  padding: 0 10px;
   margin: 0 auto;
 }
 
 .imagem-sobre {
+  display: block;
   width: 100%;
   height: auto;
   max-width: 1400px;
+  margin: 0 auto;
 }
 
 @media (max-width: 1400px) {
@@ -662,12 +663,12 @@ html {
 
 /* Página de contato */
 .container-contato {
-  /* Centralização horizontal */
   margin-left: auto;
   margin-right: auto;
   width: 90%;
   max-width: 700px;
   padding: 20px;
+  margin: 0 auto;
 }
 
 .texto-contato {
@@ -682,7 +683,7 @@ html {
 .container-formulario {
   background-color: var(--amarelo);
   padding: 20px;
-  width: 94%;
+  width: auto;
   border: 1px solid var(--preto);
   margin-top: 20px;
 }
@@ -699,8 +700,6 @@ html {
     font-size: 16px;
   }
 }
-
-
 
 /* Inputs e textarea */
 .container-formulario input[type="text"],
