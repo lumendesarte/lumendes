@@ -82,8 +82,15 @@
     </ul>
   </nav>
 
-  <!-- Galeria de Projetos -->
-  <div class="gallery">
+   <div class="gallery">
+
+    <!-- Personal Branding -->
+    <div class="thumbnail design" onclick="openContent('Personal Branding')" title="Personal Branding">
+      <img src="projetos/design/marca pessoal/capa.webp" alt="Personal Branding - Identidade Visual de Lu Mendes">
+      <div class="title">Personal Branding</div>
+    </div>
+
+    <!-- Galeria de Projetos -->
     <div class="thumbnail ilustracao producao"
       onclick="openContent('Natureza: substantivo feminino - Série de ilustrações')"
       title="Natureza - Série de ilustrações">
@@ -99,10 +106,11 @@
       <div class="title">Gatos embaralhados - Jogo</div>
     </div>
 
-    <!-- Personal Branding -->
-    <div class="thumbnail design" onclick="openContent('Personal Branding')" title="Personal Branding">
-      <img src="projetos/design/marca pessoal/capa.webp" alt="Personal Branding - Identidade Visual de Lu Mendes">
-      <div class="title">Personal Branding</div>
+    <!-- jogo da memoria mineiro-->
+    <div class="thumbnail jogos producao" onclick="openContent('jogo da memoria mineiro')"
+      title="Jogo da memória mineiro">
+      <img src="projetos/jogos/jogo da memoria/capa.webp" alt="Jogo da memória mineiro">
+      <div class="title">Jogo da memória mineiro</div>
     </div>
 
     <!-- Maristela: a lagartixa magrela - Livro -->
@@ -192,6 +200,37 @@
     <div class="thumbnail animacao" onclick="openContent('Animação tradicional')" title="Animação tradicional">
       <img src="projetos/animacao/ovelha/capa.webp" alt="Animação tradicional">
       <div class="title">Animação tradicional</div>
+    </div>
+  </div>
+
+  <!-- Conteúdo Expansível (Personal Branding) -->
+  <div id="Personal Branding" class="expanded-content" onclick="closeContent('Personal Branding')">
+    <div class="content-box" style="--cor-fundo: var(--branco)" onclick="event.stopPropagation();">
+      <div class="close-btn" onclick="closeContent('Personal Branding')">&Chi;</div>
+      <img src="projetos/design/marca pessoal/tema.webp" alt="Personal Branding">
+
+      <p class="titulo-principal" style="color: var(--preto); font-weight: bold;">Personal Branding</p>
+      <p class="texto-conteudo">
+        A <span style="font-weight: bold;">Lu Mendes</span> sintetiza de maneira <span
+          style="font-weight: bold;">leve</span> e <span style="font-weight: bold;">criativa</span> o meu trabalho. Como
+        artista, estou em <span style="font-weight: bold;">constante mudança</span>, e
+        minha marca acompanha esse movimento.</p>
+      <p class="texto-conteudo">
+        Por isso, o design foi pensado para ser flexível, capaz de refletir as <span
+          style="font-weight: bold;">diferentes fases</span> da minha produção artística sem
+        perder a conexão com o público.
+      </p>
+
+      <img src="projetos/design/marca pessoal/1.webp" alt="Personal Branding">
+      <img src="projetos/design/marca pessoal/2.webp" alt="Personal Branding">
+      <img src="projetos/design/marca pessoal/3.webp" alt="Personal Branding">
+      <img src="projetos/design/marca pessoal/4.webp" alt="Personal Branding">
+      <img src="projetos/design/marca pessoal/5.webp" alt="Personal Branding">
+      <img src="projetos/design/marca pessoal/6.webp" alt="Personal Branding">
+      <img src="projetos/design/marca pessoal/7.webp" alt="Personal Branding">
+      <img src="projetos/design/marca pessoal/8.webp" alt="Personal Branding">
+
+      <img class="assinatura" src="img/assinatura.webp" alt="lumendes.com lu Mendes @lumendesarte">
     </div>
   </div>
 
@@ -289,33 +328,45 @@
     </div>
   </div>
 
-  <!-- Conteúdo Expansível (Personal Branding) -->
-  <div id="Personal Branding" class="expanded-content" onclick="closeContent('Personal Branding')">
+    <!-- Conteúdo Expansível (jogo da memoria mineiro) -->
+  <div id="jogo da memoria mineiro" class="expanded-content" onclick="closeContent('jogo da memoria mineiro')">
     <div class="content-box" style="--cor-fundo: var(--branco)" onclick="event.stopPropagation();">
-      <div class="close-btn" onclick="closeContent('Personal Branding')">&Chi;</div>
-      <img src="projetos/design/marca pessoal/tema.webp" alt="Personal Branding">
+      <div class="close-btn" onclick="closeContent('jogo da memoria mineiro')">&Chi;</div>
+      <img src="projetos/jogos/jogo da memoria/tema.webp" alt="jogo da memoria mineiro">
 
-      <p class="titulo-principal" style="color: var(--preto); font-weight: bold;">Personal Branding</p>
-      <p class="texto-conteudo">
-        A <span style="font-weight: bold;">Lu Mendes</span> sintetiza de maneira <span
-          style="font-weight: bold;">leve</span> e <span style="font-weight: bold;">criativa</span> o meu trabalho. Como
-        artista, estou em <span style="font-weight: bold;">constante mudança</span>, e
-        minha marca acompanha esse movimento.</p>
-      <p class="texto-conteudo">
-        Por isso, o design foi pensado para ser flexível, capaz de refletir as <span
-          style="font-weight: bold;">diferentes fases</span> da minha produção artística sem
-        perder a conexão com o público.
-      </p>
+      <p class="titulo-principal" style="color: var(--vermelho); font-weight: bold;">Jogo da memória mineiro</p>
+<p class="texto-conteudo">
+Ilustrações | design | diagramação: <span style="color: var(--vermelho);">Lu Mendes</span>
 
-      <img src="projetos/design/marca pessoal/1.webp" alt="Personal Branding">
-      <img src="projetos/design/marca pessoal/2.webp" alt="Personal Branding">
-      <img src="projetos/design/marca pessoal/3.webp" alt="Personal Branding">
-      <img src="projetos/design/marca pessoal/4.webp" alt="Personal Branding">
-      <img src="projetos/design/marca pessoal/5.webp" alt="Personal Branding">
-      <img src="projetos/design/marca pessoal/6.webp" alt="Personal Branding">
-      <img src="projetos/design/marca pessoal/7.webp" alt="Personal Branding">
-      <img src="projetos/design/marca pessoal/8.webp" alt="Personal Branding">
+<p class="texto-conteudo">
+Eu gosto de MG. Gosto de ter crescido aqui, gosto das comidas, das festas, de viajar para o interior e ver a cidade vivendo. 
+Também gosto da arte (mesmo quando estudá-la, no contexto histórico de MG, deixa um sabor agridoce difícil de explicar). 
+E gosto, principalmente, dos rios e cachoeiras: deitar nas pedras molhadas, sentir a água rasa e fresca tocando a pele num dia de sol…  
+é de longe uma das melhores e mais relaxantes sensações (as mineradoras precisam ser responsabilizadas e contidas).</p>
 
+<p class="texto-conteudo">
+Carrego comigo memórias afetivas de Minas Gerais, o estado em que nasci. Relembrar a infância, os costumes e as comidas provoca um sentimento especial, 
+talvez ainda mais agora que sou adulta. Depois de conhecer outras pessoas e outros lugares, parece que o jeitinho único mineiro 
+ganhou ainda mais destaque em minha memória. </p>
+
+<p class="texto-conteudo"> 
+E é daí que vem este projeto: da <span style="color: var(--vermelho);">memória</span>. 
+O que poderia representar melhor a riqueza cultural, diversa e cheia de camadas de MG do que um jogo da memória?  
+Foi pensando nisso que surgiu o <span style="color: var(--vermelho);">Jogo da Memória Mineiro</span>: 
+um baralho ilustrado, divertido e nostálgico que homenageia esse estado imenso.</p>
+
+<p class="texto-conteudo">
+Neste projeto eu fui responsável pelo <span style="color: var(--vermelho);">design e ilustrações das cartas e caixa</span>. 
+Utilizei meus conhecimentos em <span style="color: var(--vermelho);">história da arte e design</span> 
+para criar desenhos que representam a herança cultural do lugar, mantendo uma estética fofa e simples para conversar com crianças e adultos. </p>
+
+<p class="texto-conteudo">
+Espero que aqueça o coração de quem gosta de MG, do mesmo jeito que aqueceu o meu enquanto eu ilustrava cada carta.</p><br><br>
+
+
+      <img src="projetos/jogos/jogo da memoria/2.webp" alt="jogo da memoria mineiro">
+      <img src="projetos/jogos/jogo da memoria/3.webp" alt="jogo da memoria mineiro">
+      <img src="projetos/jogos/jogo da memoria/4.webp" alt="jogo da memoria mineiro">
       <img class="assinatura" src="img/assinatura.webp" alt="lumendes.com lu Mendes @lumendesarte">
     </div>
   </div>
@@ -388,7 +439,7 @@
 
       <p class="titulo-principal" style="color: var(--amarelo); font-weight: bold;">A cidade do sol <br> capa de livro
       </p>
-      <p class="texto-conteudo " style="color: var(--branco);">Autor: <span style="color: var(--amarelo);">Khaled
+      <p class="texto-conteudo" style="color: var(--branco);">Autor: <span style="color: var(--amarelo);">Khaled
           Hosseini</span></p>
       <p class="texto-conteudo" style="color: var(--branco);">Ilustração e design da capa: <span
           style="color: var(--amarelo);">Lu Mendes</span></p>
