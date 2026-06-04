@@ -35,21 +35,18 @@ document.addEventListener("DOMContentLoaded", function () {
 //exibição do submenu
 // Seleciona o botão de "Portfolio" e o submenu
 const portfolioButton = document.querySelector('.dropdown');
-const dropdownContent = portfolioButton.querySelector('.dropdown-content');
 
 // Adiciona um evento de clique ao botão
 portfolioButton.addEventListener('click', function (event) {
-    // Impede que o clique se propague e afete outros elementos
     event.stopPropagation();
 
-    // Alterna a visibilidade do submenu
-    dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+    portfolioButton.classList.toggle('open');
 });
 
 // Fecha o submenu se o usuário clicar fora dele
 document.addEventListener('click', function (event) {
     if (!portfolioButton.contains(event.target)) {
-        dropdownContent.style.display = 'none';
+        portfolioButton.classList.remove('open');
     }
 });
 
@@ -64,19 +61,21 @@ document.querySelector(".btn-contato").addEventListener("click", function () {
 
 // botoes ativos
 document.addEventListener("DOMContentLoaded", function () {
-    // Obter o nome da página atual
     const currentPage = window.location.pathname;
 
-    // Definir a classe 'active' para o botão correto
-    if (currentPage === "/" || currentPage === "/index" || currentPage === "") {
+    if (
+        currentPage === "/" ||
+        currentPage.endsWith("/index.html") ||
+        currentPage.endsWith("/index")
+    ) {
         const portfolioButton = document.querySelector("li.dropdown > button.dropbtn");
         if (portfolioButton) {
             portfolioButton.classList.add("active");
         }
     } else if (currentPage.includes("/sobre")) {
-        document.querySelector(".btn-sobre").classList.add("active");
+        document.querySelector(".btn-sobre")?.classList.add("active");
     } else if (currentPage.includes("/contato")) {
-        document.querySelector(".btn-contato").classList.add("active");
+        document.querySelector(".btn-contato")?.classList.add("active");
     }
 });
 
