@@ -447,6 +447,12 @@ nav ul {
   }
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .title,
+  .subtitle {
+    opacity: 1;
+  }
+}
 
 @media (max-width: 804px) {
   .gallery {
